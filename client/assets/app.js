@@ -6,8 +6,8 @@ myApp.config(function($routeProvider){
 	.when('/edit/:id', {
 		templateUrl: 'partials/edit.html'
 	})
-	.when('/new', {
-		templateUrl: 'partials/new.html'
+	.when('/users', {
+		templateUrl: 'partials/users.html'
 	})
 	.when('/show/:id', {
 		templateUrl: 'partials/show.html'

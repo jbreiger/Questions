@@ -1,4 +1,5 @@
-console.log('in the users controller');
+var mongoose = require('mongoose');
+// var User = mongoose.model('Users');
 
 function UsersController(){
   
