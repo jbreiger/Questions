@@ -1,0 +1,23 @@
+<div ng-controller= "usersController">
+
+	<button ng-click= "logout()"> Logout </button>
+</div>	
+
+
+<div ng-controller= "questionsController">
+<h1> On the show answers page </h1>
+<a href="#/"> Home </a> | <a href= "#/questions/{{question._id}}"> Go back to Question </a>
+
+<p> The question is {{question.content}} </p>
+<p> The descipriton of the question is  {{question.description}} </p>
+</div>	
+	<div ng-controller="answersController">
+		<form> 
+			Answer <input type="text" ng-model= "newAnswer.content">
+			Details <input type='text' ng-model =" newAnswer.details">
+			<button type= "submit" ng-click= "create()"> 	Create Answer </button>
+		</form>
+		<button ng-click= "clear_form()"> Clear </button>
+	</div>	
+	
+</div>

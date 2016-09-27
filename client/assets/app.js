@@ -9,11 +9,14 @@ myApp.config(function($routeProvider){
 	.when('/users', {
 		templateUrl: 'partials/users.html'
 	})
-	.when('/show/:id', {
-		templateUrl: 'partials/show.html'
+	.when('/questions/:id', {
+		templateUrl: 'partials/show_question.html'
 	})
-	.when('/messages', {
-		templateUrl: 'partials/messages.html'
+	.when('/questions/:id/new_answer', {
+		templateUrl: 'partials/show_answer.html'
+	})
+	.when('/new_question', {
+		templateUrl: 'partials/new_question.html'
 	})
 	.when('/', {
 		templateUrl: 'partials/index.html'

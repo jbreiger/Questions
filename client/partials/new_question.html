@@ -1,0 +1,16 @@
+<div ng-controller= "usersController">
+
+	<button ng-click= "logout()"> Logout </button>
+</div>	
+
+<div ng-controller= "questionsController">
+	<a href="#/"> Home </a>
+<h1> New Question </h1>
+<form>
+	<input type='text' ng-model= "newQuestion.content"> Question
+	<input type= 'text' ng-model = "newQuestion.description"> Description
+	<button type= "submit" ng-click= "create()"> Create Question </button>
+	
+</form>		
+<button ng-click= "clear_form()"> Cancel and clear form </button>
+</div>

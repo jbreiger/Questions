@@ -25,7 +25,7 @@ console.log(approot);
 app.use( express.static( path.join( approot, 'client' )));
 app.use( express.static( path.join( approot, 'bower_components' )));
 
-// require(path.join(approot, 'server/config/mongoose.js'));
+require(path.join(approot, 'server/config/mongoose.js'));
 //require routes configuration, get a function from the module.exports, that gets invoked while passing it the app
 require(path.join(approot, 'server/config/routes.js'))(app);
 

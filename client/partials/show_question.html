@@ -1,0 +1,26 @@
+<div ng-controller= "usersController">
+
+	<button ng-click= "logout()"> Logout </button>
+</div>	
+
+<div ng-controller= "questionsController">
+	<a href="#/"> Home </a> | <a href= "#/questions/{{question._id}}/new_answer"> Answer the question </a>
+
+	<h2> The question is {{question.content}} </h2>
+	<h2> The description is {{question.description}} </h2>
+
+	<div ng-repeat ="x in question._answer | orderBy: '-likes'">
+		<p> The answer is {{x.content}} </p>
+		<p>  The details of the answer are {{x.details}} </p>
+		<p> The asnwer id is {{x._id}} </p>
+		<p> The number of likes is {{x.likes}} </p>
+		<p> This answer is posted by {{x._user.name}} </p>
+		<div ng-controller= "answersController">	
+			<form> 
+				<button type="submit" ng-click ="update_likes(x._id)"> Like
+			</form>
+		</div>			
+	</div>	
+	
+
+</div>	

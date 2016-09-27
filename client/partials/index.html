@@ -1,1 +1,28 @@
-In the index page
+<div ng-controller= "usersController">
+
+	<button ng-click= "logout()"> Logout </button>
+	<br>
+<h1> Use are in the index page </h1>
+
+<h1> Hi {{name}} </h1>
+
+<a href= "#/new_question"> Ask a question </a>
+<br>
+<br>
+	<div ng-controller= "questionsController">
+		content | # of answers | action
+		<div ng-repeat = "x in all_questions">
+			{{x.content}} | {{x._answer.length}} | <a href="#/questions/{{x._id}}"> Show <a/> | <a href="#/questions/{{x._id}}/new_answer"> Answer </a>
+
+			
+			 <!-- The question id is {{x._id}} -->
+		</div>
+	</div>	
+
+
+
+			
+				
+	
+
+</div>
